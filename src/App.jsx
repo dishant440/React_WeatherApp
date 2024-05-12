@@ -19,6 +19,7 @@ function App() {
       })
       .then((data) => {
         setWeatherData(data);
+        console.log(data);
       })
       .catch((err) => {
         console.log(err);
@@ -48,13 +49,30 @@ function App() {
             Today's Highlights
           </h2>
 
-          {/* Render Highlights only when weatherData is available */}
           {weatherData && (
             <>
-              <Highlights />
-              <Highlights />
-              <Highlights />
-              <Highlights />
+              <Highlights
+                highlightStates={{
+                  windStatus: 'Wind Status',
+                  windSpeed:weatherData.current.wind_kph,
+                  direction:weatherData.current.wind_dir
+                }}
+              />
+              <Highlights
+                highlightStates={{
+                  // Pass appropriate data for other instances of Highlights component
+                }}
+              />
+              <Highlights
+                highlightStates={{
+                  // Pass appropriate data for other instances of Highlights component
+                }}
+              />
+              <Highlights
+                highlightStates={{
+                  // Pass appropriate data for other instances of Highlights component
+                }}
+              />
             </>
           )}
         </div>
