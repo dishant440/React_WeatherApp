@@ -18,9 +18,9 @@ export default function Temperature({setCity,stats}) {
       index = (index + 1) % placeholderTexts.length;
     };
 
-    const intervalId = setInterval(updatePlaceholder, 2000);
+    const intervalId = setInterval(updatePlaceholder, 1500);
 
-    return () => clearInterval(intervalId);
+    // return () => clearInterval(intervalId);
   }, []);
   return (
     <>

@@ -53,24 +53,30 @@ function App() {
             <>
               <Highlights
                 highlightStates={{
-                  windStatus: 'Wind Status',
+                  Status: 'Wind',
                   windSpeed:weatherData.current.wind_kph,
                   direction:weatherData.current.wind_dir
                 }}
               />
               <Highlights
                 highlightStates={{
-                  // Pass appropriate data for other instances of Highlights component
+                  Status:"Humidity",
+                  humidity:weatherData.current.humidity,
+                  unit:"%"
                 }}
               />
               <Highlights
                 highlightStates={{
-                  // Pass appropriate data for other instances of Highlights component
+                  Status:"Visibility",
+                  visibility:weatherData.current.vis_km,
+                  unit:"km"
                 }}
               />
               <Highlights
                 highlightStates={{
-                  // Pass appropriate data for other instances of Highlights component
+                  Status:"Pressure",
+                  pressure:weatherData.current.pressure_mb,
+                  unit:"mb"
                 }}
               />
             </>
